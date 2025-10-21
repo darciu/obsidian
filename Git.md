@@ -2,13 +2,14 @@ Git najprostszym ujęciu tworzy obiekty zwane commitami, tj. zestawy zmian w pli
 
 Repo na GitHubie nie jest centralnym repo, ale po prostu kolejną wersją repozytorium, nad którym pracujemy. Remote to nazwa na inne repo niż nasze. Te remote mają swoje nazwy konfiguracyjne (aliasy adresów internetowych) zapisane w .git/config:
 - Origin - z naszego punktu widzenia "repo prawdy" i ta etykieta jest dodawana automatycznie przy klonowaniu;
-- Upstream - inny alias nadawany gdy lokalne repo musi się kontaktować z dwom repozytoriami
+- Upstream - inny alias nadawany gdy lokalne repo musi się kontaktować z dwom repozytoriami. Nazwa może być dowolna
 
 Przy pierwszym pushu nowoutworzonej gałęzi, należy wskazać ten alias
 ```
 git push -u origin feature
 ```
 flaga -u to --set-upstream; ta opcja która każe śledzić wybraną gałąź na wskazanym repo jako relację z danym branchem.
+
 
 
 **Konfiguracja Git**
