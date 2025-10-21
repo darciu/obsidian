@@ -3,7 +3,7 @@ Instalacja Python'a w odpowiedniej wersji za pomocą brew
 ```
 brew install python@3.8
 ```
-
+..
 
 **virtualenv**
 ```
