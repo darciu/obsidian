@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git.md",
+                "file": "GitLab.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Git"
+              "title": "GitLab"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": ".env",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Git.md",
+                "file": "GitLab.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Git"
+              "title": "Backlinks for GitLab"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Git.md",
+                "file": "GitLab.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Git"
+              "title": "Outgoing links from GitLab"
             }
           },
           {
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Git.md",
+                "file": "GitLab.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Git"
+              "title": "Outline of GitLab"
             }
           }
         ]
@@ -170,5 +170,23 @@
     }
   },
   "active": "4c9213ecb0a5181c",
-  "lastOpenFiles": []
+  "lastOpenFiles": [
+    "MediaPanel Gemius.md",
+    "Git.md",
+    "GitLab.md",
+    "WP/AIP Stuff/Niepowiązane informacje - inne.md",
+    "WP/AIP Stuff/Clickhouse i Metabase.md",
+    "WP/HR.md",
+    "WP/AIP Stuff/Datasety.md",
+    "FastAPI.md",
+    "WP/AIP Stuff/Polyaxon.md",
+    "WP/AIP Stuff/Site-crawler i article-extractor.md",
+    "WP/Argo CD.md",
+    "WP/AIP Stuff/S3.md",
+    "Bazy danych.md",
+    "WP/AIP Stuff/TESTY AB.md",
+    "WP/AIP Stuff/LIN UCB - parts.md",
+    "WP/AIP Stuff/LIN UCB.md",
+    "WP/AIP Stuff/Feature Store.md"
+  ]
 }

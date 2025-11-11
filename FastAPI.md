@@ -50,3 +50,17 @@ sudo lsof -i:8000
 ```
 kill -9 PID
 ```
+
+Docker
+
+budowanie obrazu
+```
+docker build -f Dockerfile_runner -t nazwa_obrazu:latest .
+```
+
+
+uruchamianie obrazu z sekretami z .env
+```
+docker run --env-file ./.env -p 8000:8000 nazwa_obrazu-runner
+```
+
