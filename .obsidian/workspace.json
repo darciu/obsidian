@@ -8,17 +8,17 @@
         "type": "tabs",
         "children": [
           {
-            "id": "4c9213ecb0a5181c",
+            "id": "7439b9ca8582d925",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "GitLab.md",
+                "file": "Python/Python.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "GitLab"
+              "title": "Python"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": ".env",
+                "query": "polyax",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 337.5
   },
   "right": {
     "id": "fce3c1e8743338e6",
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "GitLab.md",
+                "file": "WP/AIP Stuff/Clickhouse i Metabase.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for GitLab"
+              "title": "Backlinks for Clickhouse i Metabase"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "GitLab.md",
+                "file": "WP/AIP Stuff/Clickhouse i Metabase.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from GitLab"
+              "title": "Outgoing links from Clickhouse i Metabase"
             }
           },
           {
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "GitLab.md",
+                "file": "WP/AIP Stuff/Clickhouse i Metabase.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of GitLab"
+              "title": "Outline of Clickhouse i Metabase"
             }
           }
         ]
@@ -169,24 +169,37 @@
       "bases:Create new base": false
     }
   },
-  "active": "4c9213ecb0a5181c",
+  "active": "3953ca081d0b85d6",
   "lastOpenFiles": [
-    "MediaPanel Gemius.md",
-    "Git.md",
     "GitLab.md",
-    "WP/AIP Stuff/Niepowiązane informacje - inne.md",
+    "Statystyka/Do zrobienia.md",
+    "Python",
+    "Statystyka/AB Testing.md",
+    "Statystyka",
+    "IMG/Pasted image 20251211203946.png",
     "WP/AIP Stuff/Clickhouse i Metabase.md",
-    "WP/HR.md",
-    "WP/AIP Stuff/Datasety.md",
-    "FastAPI.md",
+    "IMG/Pasted image 20251208233050.png",
+    "IMG/Pasted image 20251208232440.png",
+    "WP/AIP Stuff/Niepowiązane informacje - inne.md",
+    "Python/Python.md",
+    "Bash.md",
+    "Data storage/Redis.md",
+    "WP/AIP Stuff/Feature Store.md",
     "WP/AIP Stuff/Polyaxon.md",
-    "WP/AIP Stuff/Site-crawler i article-extractor.md",
-    "WP/Argo CD.md",
-    "WP/AIP Stuff/S3.md",
+    "WP/Elasticsearch.md",
     "Bazy danych.md",
+    "Data storage",
+    "WP/HR.md",
+    "Git.md",
+    "FastAPI.md",
+    "WP/Argo CD.md",
+    "WP/Clickhouse.md",
+    "MediaPanel Gemius.md",
+    "WP/AIP Stuff/Datasety.md",
+    "WP/AIP Stuff/Site-crawler i article-extractor.md",
+    "WP/AIP Stuff/S3.md",
     "WP/AIP Stuff/TESTY AB.md",
     "WP/AIP Stuff/LIN UCB - parts.md",
-    "WP/AIP Stuff/LIN UCB.md",
-    "WP/AIP Stuff/Feature Store.md"
+    "WP/AIP Stuff/LIN UCB.md"
   ]
 }
