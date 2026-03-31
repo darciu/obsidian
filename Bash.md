@@ -85,3 +85,103 @@ ${var,} - zamienia na małą literę tylko pierwszy znak zmiennej var
 ${var,,} - zamienia na małą literę wszystkie znaki
 ${var^} - zamienia na dużą literę pierwszy znak
 ${var^^} - zamienia na dużą literę wszystkie znaki
+
+
+CASE
+``` bash
+#!/bin/bash
+
+case $1 in
+
+        herbert | administrator)
+                echo "You are admin"
+        ;;
+        help)
+                echo "Helo"
+        ;;
+        *)
+                echo "Anything else"
+;;
+esac
+```
+
+Bierze pierwszy argument podany przy uruchamianiu skryptu i sprawdza czy jest to herbert lub administrator, następnie czy jest to help, a jeśli cokolwiek innego, to printuje ostatnie echo
+
+esac to case od tyłu i zamyka ono blok instrukcji.
+
+Array
+Definicja
+``` bash
+MY_LIST=(one two three four five)
+```
+
+wywołanie
+``` bash
+echo $MY_LIST
+```
+
+n-ty element arraya
+``` bash
+echo ${MY_LIST[0]}
+```
+
+Printowanie elementów arraya w for loop
+``` bash
+#!/bin/bash
+
+MY_LIST=(jeden dwa trzy)
+
+echo "${MY_LIST[@]}"
+
+echo "Hello!"
+
+for item in "${MY_LIST[@]}"; do echo $item; done
+```
+
+Funkcja w bash z formatowanie tekstu
+``` bash
+#!/bin/bash
+
+showuptime(){
+
+        up="long ago"
+
+        since="yesterday"
+
+        cat << EOF
+
+-------
+
+This machine has been up for ${up}
+
+It has been running since ${since}
+
+------
+
+EOF
+
+}
+
+showuptime
+
+~
+```
+
+Exit codes
+W bash każdy proces kończy się kodem wyjścia, który jest w zakresie 0 - 255. 0 oznacza sukces, a reszta z nich to błędy różnego rodzaju.
+
+AWK
+Jest to język przetwarzania tekstu w bashu, służący do skanowania wierszy wejścia, dopasowywania wzorców oraz przetwarzania tych danych.
+Przykład
+``` bash
+echo raz dwa trzy > tekst.txt
+awk '{print $2}' tekst.txt
+```
+zwraca dwa
+
+Przydaje się do przetwarzania plików tabelarycznych, takich jak csv.
+``` bash
+echo raz,dwa,trzy > dane.csv
+awk -F, '{print $3}' dane.csv
+```
+zwraca trzy
