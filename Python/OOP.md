@@ -129,7 +129,6 @@ Dekorator zmieniający charakter klasy w  budowaniu struktur danych. Przydatne, 
 co to jest singleton
 
 callable
-generatory
 PEP
 
 asynchroniczna iteracja

@@ -1,0 +1,15 @@
+Kiedy uruchamiam skrypt pythonowy, to uruchamiany on jest jako jeden proces, który ma PID. Wewnątrz tego procesu istnieje wątek główny. Wątek to ciąg instrukcji, które są wykonywane linia po linii kodu. Multithreading polega na tym, że w obrębie jednego procesu uruchamiane są inne wątki. Współdzielą one tą samą pamięć i mają dostęp do tych samych obiektów i struktur co wątek główny. System operacyjny zarządza tym jaki wątek ma dostęp do procesora.
+Jednak blokerem jest tutaj Global Interpreter Lock, który blokuje dostęp do jednego zasobu dla więcej niż jednego wątku jednocześnie. Multithreading radzi sobie z tym tak, że istnieje context switching, który przełącza ten dostęp pomiędzy wątkami.
+
+Ma to sens w zadaniach typu I/O gdzie trzeba czekać na odpowiedź z zewnątrz, np. od API sieciowego. Nie ma to sensu kiedy wąskim gardłem jest CPU (lub GPU).
+
+Kiedy używać multithreading a kiedy asyncio? Oba podejścia to współbieżność, ale multithreading jest polecany gdy biblioteki nie mają swoich asynchronicznych odpowiedników metod. Threading ma większy narzut RAM na system operacyjny niż asyncio. Asyncio ma tą wadę, że jedna funkcja asynchroniczna gdzieś w głębi kodu powoduje, że każda powyżej również musi być async.
+
+**Global Interpreter Lock** - Python zarządza pamięcią tak, że zlicza referencje obiektów. Jeśli liczba referencji spada do zera, to pamięć jest zwalniana. To zliczanie jednak powoduje, że wielowątkowość jest problematyczna, jeśli każdy jednocześnie miałby dostęp do obiektu. Dwa wątki mogłby jednocześnie zwiększać lub zmniejszać licznik, co spowodowałoby race condition. W takim przypadku możliwe byłoby utworzenie dla każdego obiektu z osobna jego własnej blokady, lub zastosowanie globalnej blokady per interpreter, co jest o wiele bardziej optymalnym podejściem. Kiedy OS steruje który wątek ma obecnie zdjętą blokadę GIL. Warto pamiętać, że GIL jest tylko w CPythonie (nie mają jej Jython, IronPython).
+
+**Multiprocessing** - na każdej jednostce CPU tworzony jest osobny wątek, który ma własną kopię pamięci interpretera, więc nie ma tam GIL. Szybkość obliczeniowa jest jednak kosztem zajętości RAMu. Dodatkowo utworzenie nowego wątku to sekundy, więc na krótkie obliczenia multiprocessing się nie nadaje. Jako że wątki nie współdzielą pamięci, to nie mogą odczytywać stanu obiektów z innych wątków.
+Do komunikacji służy IPC, a obiekty przesyłane w ten sposób są picklowane.
+
+Tworzenie nowych procesów można robić na dwa spsoby:
+- forking - domyślnie na Linuxie. OS tworzy dokładną kopię procesu rodzica z momentu klonowania. Jest to metoda lazy, bo na początku proces nie kopiuje fizycznie pamięci RAM, ale ją współdzieli z rodzicem. Zmienia się to jednak kiedy jakiś obiekt zostanie zmodyfikowany.
+- spawning - domyślnie na Windows i macOS. Uruchamiany jest zupełnie nowy, czysty interpreter Pythona, z nowymi importami bibliotek i alokowaniu pamięci obiekatmi. O wiele wolniejsza metoda, ale też o wiele bardziej niezawodna.
